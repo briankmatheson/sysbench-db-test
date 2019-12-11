@@ -16,5 +16,7 @@ spec:
         value: "10"
       - name: MYSQL_SYSBENCH_TABLE_SIZE
         value: "1000"
+      - name: MYSQL_ROOT_PASSWORD
+        value: "rjdkMev9fh"
     command:
       - "/mysql-sysbench.sh"
