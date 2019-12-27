@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# mysqlRootPassword	Password for the root user. Ignored if existing secret is provided	Random 10 characters
+# mysqlUser		Username of new user to create.	       		       	  		nil
+# mysqlPassword		Password for the new user. Ignored if existing secret is provided	Random 10 characters
+# readinessProbe.initialDelaySeconds	Delay before readiness probe is initiated	5
+
+helm install mysql-cstor1d1r stable/mysql  --namespace benchmark-cstor1d1r --set mysqlRootPassword=b144rgh,mysqlUser=sbtest,mysqlPassword=sbtest,livenessProbe.initialDelaySeconds=120

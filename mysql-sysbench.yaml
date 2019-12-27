@@ -9,14 +9,16 @@ spec:
     image: briankmatheson/mysql-sysbench
     env:
       - name: MYSQL_SYSBENCH_UUT
-        value: "mysql"
+        value: "mysql-cstor1d1r"
       - name: MYSQL_SYSBENCH_THREADS
-        value: "10"
+        value: "2"
       - name: MYSQL_SYSBENCH_TABLES
         value: "10"
       - name: MYSQL_SYSBENCH_TABLE_SIZE
-        value: "1000"
+        value: "10000"
+      - name: MYSQL_SYSBENCH_DATABASE_NAME
+        value: "sbtest"
       - name: MYSQL_ROOT_PASSWORD
-        value: "rjdkMev9fh"
+        value: "password"
     command:
       - "/mysql-sysbench.sh"
