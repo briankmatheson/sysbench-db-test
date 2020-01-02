@@ -5,7 +5,7 @@ host="$MYSQL_SYSBENCH_UUT"
 threads="$MYSQL_SYSBENCH_THREADS"
 tables="$MYSQL_SYSBENCH_TABLES"
 size="$MYSQL_SYSBENCH_TABLE_SIZE"
-dbname="$MYSQL_SYSBENCH_DATABASE_NAME"
+dbname=`echo $MYSQL_SYSBENCH_DATABASE_NAME | sed 's/.*-//'`
 time=120
 
 which mysql || apt -y install mysql
